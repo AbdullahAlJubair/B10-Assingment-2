@@ -31,7 +31,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding-top: 60px;
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .logo>h1 {
@@ -68,6 +68,12 @@ nav {
     color: var(--primaryWhite);
     font-size: 18px;
     font-weight: 400;
+}
+
+.hamburger {
+    color: var(--primaryWhite);
+    font-size: 18px;
+    display: none;
 }
 
 /* Hero section Design */
@@ -129,7 +135,10 @@ nav {
     width: 50%;
     position: relative;
 }
+
 .heroImage>img {
+    width: 349px;
+    height: 580px;
     object-fit: cover;
 }
 
@@ -156,11 +165,13 @@ nav {
     font-size: 13px;
     font-weight: 400;
 }
+
 .heroImgDetails-1 {
     position: absolute;
     top: 23%;
     right: 8%;
 }
+
 .heroImgDetails-2 {
     display: flex;
     justify-content: space-between;
@@ -170,12 +181,15 @@ nav {
     left: 0;
     bottom: 12%;
 }
+
 .heroImgDetails-2 h3 {
     font-size: 24px;
 }
+
 .heroImgDetails-2 p {
     font-size: 16px;
 }
+
 .heroPlay {
     padding: 10px;
     text-align: center;
@@ -185,6 +199,122 @@ nav {
     height: 40px;
     border-radius: 50%;
 }
+
 .heroPlay>i {
     display: none;
+}
+
+
+
+
+
+/* Tablet Device Stylesheet */
+
+@media screen and (max-width: 992px) {
+    header {
+        background: linear-gradient(180deg, #111 90%, rgba(119, 119, 119, 0.00) 100%);
+    }
+
+    nav {
+        padding: 50px 30px 0;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu>li>a {
+        font-size: 16px;
+    }
+
+    #hero {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .heroTextContainer,
+    .heroImage {
+        width: 100%;
+    }
+
+    .heroTextContainer {
+        padding: 75px 90px 100px;
+    }
+
+    .heroImgDetails-1 {
+        top: 13%;
+        right: 25%;
+    }
+
+    .heroImgDetails-2 {
+        left: 20%;
+        bottom: 25%;
+    }
+}
+
+
+
+
+/* Mobile Device Stylesheet */
+@media screen and (max-width: 576px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .heroTextContainer {
+        padding: 50px 30px;
+    }
+
+    .heroTextContainer>h1 {
+        font-size: 36px;
+    }
+
+    .heroTextContainer>h1,
+    .heroTextContainer>p {
+        max-width: 285px;
+    }
+
+    .primaryBtn,
+    .heroBtn {
+        font-size: 14px;
+        padding: 15px 35px;
+    }
+
+    .heroImage>img {
+        width: 340px;
+        height: 580px;
+    }
+
+    .heroImgDetails-1 {
+        right: 12%;
+    }
+
+    .heroImgDetails-1>h3 {
+        font-size: 30px;
+    }
+
+    .heroImgDetails-1>p {
+        font-size: 10px;
+    }
+
+    .heroImgDetails-2 {
+        left: 10%;
+        bottom: 42%;
+    }
+
+    .heroPlay>i {
+        display: block;
+    }
+
+    .heroImgDetails-2 h3 {
+        font-size: 18px;
+    }
+
+    .heroImgDetails-2 p {
+        font-size: 12px;
+    }
 }
