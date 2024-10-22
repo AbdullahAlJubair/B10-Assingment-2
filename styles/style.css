@@ -209,7 +209,8 @@ nav {
     margin-top: 100px;
 }
 
-.globalHeading { /* Global Heading Section Start */
+.globalHeading {
+    /* Global Heading Section Start */
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -228,7 +229,9 @@ nav {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.3px;
-}  /* Global Heading Section End */
+}
+
+/* Global Heading Section End */
 
 .habitsCardContainer {
     display: grid;
@@ -265,7 +268,41 @@ nav {
     letter-spacing: 0.3px;
 }
 
+/* Run Extra Mile Section Design */
+#run {
+    margin: 100px auto 0;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 165px;
+    padding: 30px 50px;
+    border-radius: 18px;
+    background-color: #222;
+}
 
+.runContent>h2 {
+    color: var(--primaryWhite);
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.runContent>p {
+    color: var(--secondaryWhite);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    margin-bottom: 35px;
+}
+
+.runImg>img {
+    width: 366px;
+    height: 312px;
+    border-radius: 18px;
+    object-fit: cover;
+}
 
 
 
@@ -337,14 +374,30 @@ nav {
         left: 20%;
         bottom: 25%;
     }
+
     .globalHeading {
         width: 65%;
     }
+
     .habitsCardContainer {
         gap: 60px;
         grid-template-columns: repeat(2, calc(50% - 60px));
         width: 75%;
         margin: 60px auto 0;
+    }
+
+    #run {
+        width: 90%;
+        gap: 65px;
+    }
+
+    .runContent>h2 {
+        font-size: 36px;
+    }
+
+    .runImg>img {
+        width: 256px;
+        height: 319px;
     }
 }
 
@@ -378,6 +431,7 @@ nav {
     .heroBtn {
         font-size: 14px;
         padding: 15px 35px;
+        width: 100%;
     }
 
     .heroImage>img {
@@ -413,14 +467,28 @@ nav {
     .heroImgDetails-2 p {
         font-size: 12px;
     }
+
     .globalHeading {
         width: 95%;
     }
+
     .globalHeading>h2 {
         font-size: 32px;
     }
+
     .habitsCardContainer {
         grid-template-columns: 230px;
         width: 90%;
+    }
+
+    #run {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .runImg>img {
+        width: 310px;
+        height: 170px;
     }
 }
