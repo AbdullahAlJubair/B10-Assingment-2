@@ -217,9 +217,10 @@ nav {
 .heroPlay>i {
     display: none;
 }
- /* ---------------------------------Global Heading Section Start------------------------ */
- .globalHeading {
-   
+
+/* ---------------------------------Global Heading Section Start------------------------ */
+.globalHeading {
+
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -239,6 +240,7 @@ nav {
     line-height: 24px;
     letter-spacing: 0.3px;
 }
+
 /* ---------------------------------Global Heading Section End--------------------------- */
 
 /* ---------------------------------Change Your Habits Section---------------------------------- */
@@ -422,7 +424,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 20px;
 }
 
@@ -729,11 +731,13 @@ hr {
     line-height: 24px;
     letter-spacing: 0.3px;
 }
+
 .creditFooter>p>span {
     color: var(--primaryColor);
     font-family: 'MiamaFont', sans-serif;
     font-size: 18px;
 }
+
 /* ------------------------------------------------Tablet Device Stylesheet------------------------- */
 
 @media screen and (max-width: 992px) {
@@ -824,7 +828,7 @@ hr {
     .planContainer {
         grid-template-columns: 1fr;
         width: 80%;
-        margin: 70px auto 0;
+        margin: 40px auto 0;
     }
 
     .bmiContainer {
@@ -872,7 +876,7 @@ hr {
     .creditFooter>p {
         font-size: 14px;
     }
-    
+
 }
 
 /* --------------------------------Custom Device Responsive Stylesheet--------------------- */
@@ -880,9 +884,11 @@ hr {
     .heroImgDetails-1 {
         right: 10%;
     }
+
     .heroImgDetails-2 {
         left: 10%;
     }
+
     .primaryBtn {
         padding: 16px 30px;
     }
@@ -902,9 +908,11 @@ hr {
     .hamburger {
         display: block;
     }
+
     #hero {
         align-items: center;
     }
+
     .heroTextContainer {
         width: 100%;
         padding: 50px 30px;
@@ -1003,10 +1011,6 @@ hr {
         padding: 0 10px;
     }
 
-    #training>.globalHeading {
-        text-align: center;
-    }
-
     #training>.globalHeading>h2 {
         font-size: 26px;
     }
@@ -1028,9 +1032,16 @@ hr {
         display: none;
     }
 
+    #plan>.globalHeading>h2 {
+        font-size: 28px;
+    }
+
     .planContainer {
-        width: 95%;
+        width: 100%;
         margin: 50px auto 0;
+    }
+    .planCard {
+        padding: 50px 10px;
     }
 
     .bmiContainer {
@@ -1127,7 +1138,12 @@ hr {
     .heroImgDetails-2 h3 {
         font-size: 16px;
     }
-
+    #run {
+        padding: 30px 10px 20px;
+    }
+    .runContent>h2 {
+        font-size: 28px;
+    }
     .runImg {
         max-width: 290px;
     }
@@ -1135,6 +1151,7 @@ hr {
     .runImg>img {
         width: 100%;
     }
+
     .footerLogo>h1 {
         font-size: 40px;
         margin-bottom: 20px;
