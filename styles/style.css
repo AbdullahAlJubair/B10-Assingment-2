@@ -394,6 +394,93 @@ nav {
     background-color: rgba(0, 71, 255, 0.3);
 }
 
+/* Choose Our Plan Section Design */
+#plan {
+    margin-top: 100px;
+}
+#plan>.globalHeading>h5 {
+    font-size: 16px;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.planContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.planCard {
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.10);
+    padding: 50px 30px;
+    transform: skewY(-4deg);
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.planCard:hover {
+    background-color: #222;
+}
+
+.planCard:hover .planBtn {
+    background-color: var(--primaryColor);
+}
+
+.planCardData {
+    margin-bottom: 40px;
+    transform: skewY(4deg);
+}
+
+.planCardData>h4 {
+    font-size: 20px;
+    color: var(--primaryWhite);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.planCardData>h3 {
+    font-size: 60px;
+    color: var(--primaryColor);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.planCardData>p {
+    color: var(--secondaryWhite);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.planList {
+    font-size: 16px;
+    color: #f2f2f2;
+    line-height: 32px;
+    list-style: none;
+    margin-bottom: 40px;
+    transform: skewY(4deg);
+}
+
+.planBtn {
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    padding: 17px 30px 16px;
+    color: var(--primaryWhite);
+    background: #222;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 0;
+    border-radius: 4px;
+    transform: skewY(4deg);
+    cursor: pointer;
+}
+
 /* BMI Calculator Section Design */
 #bmi {
     margin-top: 100px;
@@ -678,9 +765,11 @@ hr {
     .menu {
         gap: 10px;
     }
+
     .menu>li {
         padding: 8px 16px;
     }
+
     .menu>li>a {
         font-size: 17px;
     }
@@ -735,6 +824,20 @@ hr {
 
     #training>.globalHeading {
         width: 90%;
+    }
+
+    #plan {
+        margin-top: 50px;
+    }
+
+    #plan>.globalHeading>h2 {
+        font-size: 36px;
+    }
+
+    .planContainer {
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 70px auto 0;
     }
 
     .bmiContainer {
@@ -915,8 +1018,9 @@ hr {
         display: none;
     }
 
-    #bmi {
-        margin-top: 50px;
+    .planContainer {
+        width: 95%;
+        margin: 50px auto 0;
     }
 
     .bmiContainer {
@@ -932,9 +1036,11 @@ hr {
     .inputBoxFull select {
         width: 96%;
     }
+
     #team {
         margin-top: 70px;
     }
+
     .teamContainer {
         grid-template-columns: 1fr;
         margin: 60px 10px 0;
@@ -959,6 +1065,7 @@ hr {
         font-size: 26px;
         margin-bottom: 25px;
     }
+
     .creditFooter {
         padding: 15px;
     }
