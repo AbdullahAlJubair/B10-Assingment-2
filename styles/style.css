@@ -449,14 +449,16 @@ nav {
     text-align: left;
     margin-top: 14px;
 }
+
 .bmiCalculator {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin-top: 35px;
 }
+
 .inputBox input,
-.inputBox select{
+.inputBox select {
     border: 0;
     width: 100%;
     padding: 12px 40px 12px 20px;
@@ -466,38 +468,96 @@ nav {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.10);
 }
+
 .inputBox select {
     background-color: transparent;
     padding: 12px 0 12px 15px;
     width: 95%;
 }
+
 .inputBoxFull {
     grid-column: span 2;
 }
+
 .inputBoxFull select {
     width: 97.5%;
 }
+
 .inputBox input::placeholder {
     color: rgba(255, 255, 255, 0.60);
 }
+
 .inputBox label {
     background-color: rgba(255, 255, 255, 0.10);
     padding: 12px 10px 12px 0;
     border-radius: 8px;
 }
+
 .inputBox select>option {
     background-color: #222;
 }
 
-.inputBox>input:focus, .inputBox select:focus {
+.inputBox>input:focus,
+.inputBox select:focus {
     outline: none;
 }
+
 .bmiCalculator>button {
     margin-top: 15px;
 }
 
+/* Meet Our Team Section Design */
+#team {
+    margin-top: 100px;
+}
+.teamContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
 
+.teamCard {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+}
 
+.teamCard>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.teamData {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 18px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+}
+
+.teamData>h6 {
+    color: var(--primaryWhite);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.teamData>p {
+    color: var(--secondaryWhite);
+    font-size: 14px;
+    font-weight: 400;
+}
 
 
 
@@ -584,11 +644,16 @@ nav {
     #training>.globalHeading {
         width: 90%;
     }
+
     .bmiContainer {
         grid-template-columns: 1fr;
     }
+
     .inputBox label {
         padding: 12px 15px 12px 0;
+    }
+    .teamContainer {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -699,13 +764,19 @@ nav {
     #trainingImage6 {
         display: none;
     }
+
     .bmiContainer {
         padding: 30px 20px;
     }
+
     .inputBox select {
         width: 92%;
     }
+
     .inputBoxFull select {
         width: 96%;
+    }
+    .teamContainer {
+        grid-template-columns: 1fr;
     }
 }
