@@ -307,31 +307,36 @@ nav {
 #training {
     padding: 0 20px;
 }
+
 #training>.globalHeading {
     text-align: left;
     width: 65%;
     margin: 100px 0 0;
 }
+
 .trainingGallery {
     margin-top: 60px;
     display: grid;
-    grid-template-areas: 
-    "a b b b b b b b b b b c"
-    "d d d d d d d e f f f f"
+    grid-template-areas:
+        "a b b b b b b b b b b c"
+        "d d d d d d d e f f f f"
     ;
 }
+
 .trainingImage {
     overflow: hidden;
     height: 170px;
     position: relative;
-    
+
 }
+
 .trainingImage>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
+
 }
+
 .overlay {
     position: absolute;
     top: 0;
@@ -339,48 +344,157 @@ nav {
     right: 0;
     left: 0;
 }
+
 #trainingImage1 {
     grid-area: a;
 }
+
 #trainingImage1>.overlay {
     background-color: rgba(6, 255, 210, 0.5);
 }
+
 #trainingImage2 {
     grid-area: b;
 }
+
 #trainingImage2>.overlay {
     background-color: rgba(255, 0, 0, 0.3);
 }
+
 #trainingImage3 {
     grid-area: c;
 }
+
 #trainingImage3>.overlay {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 #trainingImage4 {
     grid-area: d;
 }
+
 #trainingImage4>.overlay {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 #trainingImage5 {
     grid-area: e;
 }
+
 #trainingImage5>.overlay {
     background-color: rgba(66, 255, 0, 0.3);
 }
+
 #trainingImage6 {
     grid-area: f;
 }
+
 #trainingImage6>.overlay {
     background-color: rgba(0, 71, 255, 0.3);
 }
 
+/* BMI Calculator Section Design */
+#bmi {
+    margin-top: 100px;
+}
 
+.bmiContainer {
+    background-color: #222;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    gap: 50px;
+    padding: 50px 100px;
+    margin-top: 80px;
+}
 
+.bmiChart>h3,
+.bmiCalculatorBox>h3 {
+    color: var(--primaryWhite);
+    font-size: 28px;
+    font-weight: 900;
+    text-align: left;
+}
 
+.bmiTable {
+    text-align: left;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
 
+.bmiTable>thead th,
+.bmiTable>tbody td {
+    padding: 15px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.bmiTable>thead th {
+    color: var(--primaryWhite);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bmiTable>tbody td {
+    color: var(--secondaryWhite);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.bmiCalculatorBox>p {
+    color: var(--secondaryWhite);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    margin-top: 14px;
+}
+.bmiCalculator {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 35px;
+}
+.inputBox input,
+.inputBox select{
+    border: 0;
+    width: 100%;
+    padding: 12px 40px 12px 20px;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.10);
+}
+.inputBox select {
+    background-color: transparent;
+    padding: 12px 0 12px 15px;
+    width: 95%;
+}
+.inputBoxFull {
+    grid-column: span 2;
+}
+.inputBoxFull select {
+    width: 97.5%;
+}
+.inputBox input::placeholder {
+    color: rgba(255, 255, 255, 0.60);
+}
+.inputBox label {
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 12px 10px 12px 0;
+    border-radius: 8px;
+}
+.inputBox select>option {
+    background-color: #222;
+}
+
+.inputBox>input:focus, .inputBox select:focus {
+    outline: none;
+}
+.bmiCalculator>button {
+    margin-top: 15px;
+}
 
 
 
@@ -466,8 +580,15 @@ nav {
         width: 256px;
         height: 319px;
     }
+
     #training>.globalHeading {
         width: 90%;
+    }
+    .bmiContainer {
+        grid-template-columns: 1fr;
+    }
+    .inputBox label {
+        padding: 12px 15px 12px 0;
     }
 }
 
@@ -561,18 +682,30 @@ nav {
         width: 310px;
         height: 170px;
     }
+
     .trainingGallery {
         margin-top: 60px;
         display: grid;
-        grid-template-areas: 
-        "a b "
-        "d e"
+        grid-template-areas:
+            "a b "
+            "d e"
         ;
     }
+
     #trainingImage3 {
         display: none;
     }
+
     #trainingImage6 {
         display: none;
+    }
+    .bmiContainer {
+        padding: 30px 20px;
+    }
+    .inputBox select {
+        width: 92%;
+    }
+    .inputBoxFull select {
+        width: 96%;
     }
 }
