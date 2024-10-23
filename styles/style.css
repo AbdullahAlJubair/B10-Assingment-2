@@ -1,3 +1,9 @@
+/* --------------------------------Custom Font-------------------------------- */
+@font-face {
+    font-family: 'MiamaFont';
+    src: url('../fonts/Miama.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +33,7 @@ hr {
     margin: 0 auto;
 }
 
-/* Navigation section Design */
+/* --------------------------------Navigation section Design--------------------------------- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -77,7 +83,7 @@ nav {
     display: none;
 }
 
-/* Hero section Design */
+/* --------------------------------------Hero section Design---------------------------- */
 #hero {
     display: flex;
     justify-content: center;
@@ -94,6 +100,13 @@ nav {
     font-size: 78px;
     font-weight: 900;
     margin-bottom: 28px;
+    line-height: 120%;
+}
+
+.difText {
+    font-family: 'MiamaFont', sans-serif;
+    font-size: 140px;
+    font-weight: 400;
 }
 
 .heroTextContainer>p {
@@ -204,14 +217,9 @@ nav {
 .heroPlay>i {
     display: none;
 }
-
-/* Change Your Habits Section */
-#habits {
-    margin-top: 100px;
-}
-
-.globalHeading {
-    /* Global Heading Section Start */
+ /* ---------------------------------Global Heading Section Start------------------------ */
+ .globalHeading {
+   
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -231,8 +239,12 @@ nav {
     line-height: 24px;
     letter-spacing: 0.3px;
 }
+/* ---------------------------------Global Heading Section End--------------------------- */
 
-/* Global Heading Section End */
+/* ---------------------------------Change Your Habits Section---------------------------------- */
+#habits {
+    margin-top: 100px;
+}
 
 .habitsCardContainer {
     display: grid;
@@ -269,7 +281,7 @@ nav {
     letter-spacing: 0.3px;
 }
 
-/* Run Extra Mile Section Design */
+/* -------------------------------------Run Extra Mile Section Design----------------------------- */
 #run {
     margin: 100px 20px 0;
     display: flex;
@@ -304,7 +316,7 @@ nav {
     object-fit: cover;
 }
 
-/* Trainings and Exercises section Design */
+/* -------------------------------Trainings and Exercises section Design-------------------------- */
 #training {
     padding: 0 20px;
     margin: 100px 0 0;
@@ -394,16 +406,18 @@ nav {
     background-color: rgba(0, 71, 255, 0.3);
 }
 
-/* Choose Our Plan Section Design */
+/* ------------------------------Choose Our Plan Section Design-------------------------------- */
 #plan {
     margin-top: 100px;
 }
+
 #plan>.globalHeading>h5 {
     font-size: 16px;
     color: var(--primaryColor);
     text-transform: uppercase;
     font-weight: 700;
 }
+
 .planContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -481,7 +495,7 @@ nav {
     cursor: pointer;
 }
 
-/* BMI Calculator Section Design */
+/*---------------------------------- BMI Calculator Section Design ------------------------------*/
 #bmi {
     margin-top: 100px;
 }
@@ -595,7 +609,7 @@ nav {
     margin-top: 15px;
 }
 
-/* Meet Our Team Section Design */
+/* ---------------------------------------------Meet Our Team Section Design------------------------- */
 #team {
     margin-top: 100px;
 }
@@ -649,7 +663,7 @@ nav {
     font-weight: 400;
 }
 
-/* Footer Section Design */
+/* -----------------------------------Footer Section Design------------------------------ */
 
 footer {
     background-color: rgba(255, 255, 255, 0.10);
@@ -715,43 +729,12 @@ hr {
     line-height: 24px;
     letter-spacing: 0.3px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Tablet Device Stylesheet */
+.creditFooter>p>span {
+    color: var(--primaryColor);
+    font-family: 'MiamaFont', sans-serif;
+    font-size: 18px;
+}
+/* ------------------------------------------------Tablet Device Stylesheet------------------------- */
 
 @media screen and (max-width: 992px) {
     header {
@@ -777,9 +760,13 @@ hr {
     #hero {
         flex-direction: column;
         padding: 0;
+        align-items: start;
     }
 
-    .heroTextContainer,
+    .heroTextContainer {
+        width: 90%;
+    }
+
     .heroImage {
         width: 100%;
     }
@@ -885,13 +872,29 @@ hr {
     .creditFooter>p {
         font-size: 14px;
     }
+    
+}
+
+/* --------------------------------Custom Device Responsive Stylesheet--------------------- */
+@media screen and (max-width:760px) {
+    .heroImgDetails-1 {
+        right: 10%;
+    }
+    .heroImgDetails-2 {
+        left: 10%;
+    }
+    .primaryBtn {
+        padding: 16px 30px;
+    }
 }
 
 
-
-
-/* Mobile Device Stylesheet */
+/* -------------------------------Mobile Device Stylesheet----------------------------------- */
 @media screen and (max-width: 576px) {
+    nav {
+        padding: 30px 30px 0;
+    }
+
     .menu {
         display: none;
     }
@@ -899,13 +902,20 @@ hr {
     .hamburger {
         display: block;
     }
-
+    #hero {
+        align-items: center;
+    }
     .heroTextContainer {
+        width: 100%;
         padding: 50px 30px;
     }
 
     .heroTextContainer>h1 {
-        font-size: 36px;
+        font-size: 45px;
+    }
+
+    .difText {
+        font-size: 70px;
     }
 
     .heroTextContainer>h1,
@@ -1070,4 +1080,63 @@ hr {
         padding: 15px;
     }
 
+}
+
+/* -----------------------Custom Device Responsive---------------------------------- */
+@media screen and (max-width:423px) {
+    .heroBtnContainer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .heroImage {
+        max-width: 270px;
+    }
+
+    .heroImage>img {
+        width: 100%;
+        height: 450px;
+    }
+
+    .heroImgDetails-1,
+    .heroImgDetails-2 {
+        padding: 15px 15px;
+        border-radius: 10px;
+    }
+
+    .heroImgDetails-1 {
+        right: 0;
+    }
+
+    .heroImgDetails-2 {
+        left: 2%;
+        bottom: 15%;
+    }
+
+    .heroImgDetails-1>h3 {
+        font-size: 20px;
+    }
+
+    .heroPlay {
+        padding: 7px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .heroImgDetails-2 h3 {
+        font-size: 16px;
+    }
+
+    .runImg {
+        max-width: 290px;
+    }
+
+    .runImg>img {
+        width: 100%;
+    }
+    .footerLogo>h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
 }
